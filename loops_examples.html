@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECT USING LOOPS</title>
+</head>
+<body>
+    <select name="year" id="year">
+        <!-- <option>YEAR</option>
+        <option value="2000">2000</option>
+        <option value="2000">2001</option>
+        <option value="2000">2002</option>
+        <option value="2000">2003</option>
+        <option value="2000">2004</option>
+        <option value="2000">2005</option>
+        <option value="2000">2006</option>
+        <option value="2000">2007</option>
+        <option value="2000">2008</option>
+        <option value="2000">2009</option> -->
+    </select>
+
+    <select name="month" id="month">
+    </select>
+
+    <select name="Date" id="date">
+    </select>
+
+    <select name="Day" id="days">
+    </select>
+
+    <script>
+
+        document.write("<br>" + "<h2>YEAR USING FOR LOOP</h2>")
+
+        var opt="<option>Year</option>";
+        for(var i=2000;i<=2030;i++){
+            opt+="<option value=" + i + ">" + i + "</option>";
+        }
+        document.getElementById('year').innerHTML=opt;
+
+        document.write("<br>" + "<h2>MONTH AS NUMBERS USING WHILE LOOP </h2>")
+        // var mon="<option>Month</option>";
+        // let j=1;
+        // while(j<=12){
+        //     mon+="<option value=" + j + ">" +j+ "</option>";
+        //     j++;
+        // }
+        // document.getElementById('month').innerHTML=mon;
+
+        document.write("<br>" + "<h2>MONTH AS ARRAY USING WHILE LOOP </h2>")
+        var arr=['january','february','march','april','may','june','july','august','september','october','november','december'];
+
+        var mon="<option>Month</option>"
+        let j=0;
+        while(j<arr.length){
+            mon+="<option value=" + arr[j] + ">" + arr[j] + "</option>";
+            j++;
+        }
+        document.getElementById('month').innerHTML=mon;
+
+        document.write("<br>" + "<h2>DATE USING DO - WHILE LOOP </h2>")
+        var dat="<option>Date</option>";
+        let k=1;
+        do{
+            dat+="<option value=" + k + ">" + k + "</option>";
+            k++;
+        }
+        while(k<=30);
+        document.getElementById('date').innerHTML=dat;
+
+        document.write("<br>" + "<h2>DAYS AS ARRAY USING WHILE LOOP </h2>")
+        var arr2=['monday','tuesday','wednesday','thrusday','friday','saturday','sunday'];
+
+        var day="<option>Day</option>"
+        let l=0;
+        while(l<arr2.length){
+            day+="<option value=" + arr2[l] + ">" + arr2[l] + "</option>";
+            l++;
+        }
+        document.getElementById('days').innerHTML=day;
+            
+    </script>
+
+</body>
+</html>

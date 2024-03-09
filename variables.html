@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARIABLES</title>
+</head>
+<body>
+    <script>
+         
+        // PRINT METHODS
+        document.write("hello how are u ?"); //print on webpage
+        console.log("i am good"); //for check logics and errors
+
+        // VARIABLES
+        // var, let , const
+
+        // var
+        // redeclaration and reinitialization
+        var a;
+        a=10;
+        console.log(a);
+        var a;
+        a=11;
+        console.log(a);
+
+        // global scope
+        var b=3;
+        {
+            console.log(b);
+        }
+
+        {
+            var c=5;
+        }
+        console.log(c);
+
+        // let
+        // only reinitialization
+        var d;
+        d=10;
+        console.log(d);
+        d=11;
+        console.log(d);
+
+        // local scope / block scope
+        {
+            let e=3;
+            console.log(e);
+        }
+
+        let f=3;
+        {
+            console.log(f);
+        }
+
+        // const
+        // redeclaration and reinitialization both not possible
+        // in const declaration and intialization can be done in same line only
+
+        const g=10;
+        console.log(g);
+
+        // local scope / block scope
+        {
+            const h=3;
+            console.log(h);
+        }
+
+        const i=3;
+        {
+            console.log(i);
+        }
+        document.write("bhumika");
+    </script>
+</body>
+</html>

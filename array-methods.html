@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY METHODS</title>
+</head>
+<body>
+    <!-- array methods:
+        length()
+        push()
+        pop()
+        unshift()
+        shift()
+        slice()
+        splice()
+        concat()
+        sort()
+        reverse()
+    -->
+    <script>
+        // array literal method
+        document.write("<h2>array literal</h2>");
+        let a=['fb','fj','hfjs'];
+        document.write(a + "<br>");
+
+        // array contructor method
+        document.write("<h2>array constructor</h2>");
+        let b=new Array('fb','fj','hfjs');
+        document.write(b + "<br>");
+
+        // push method
+        document.write("<h2>push method</h2>");
+        var ar=['mobile','laptop','computer'];
+
+        // this one will print actual array after pushing the element
+        // ar.push("tv","tablet");
+        // document.write(ar + "<br>");
+
+        //here .push will return the length of the new array
+        document.write(ar.push("tv","tablet") + "<br>"); 
+        
+        // This final part is why console.log(mutualFollowers.push(bobsFollowers[i]) doesn’t work as expected. It is logging the length of mutualFollowers since that is the return of .push(). If you just want to log the array, all you need is console.log(mutualFollowers).
+
+        // pop method
+        document.write("<h2>pop method</h2>");
+
+        // it will print the whole array after popping out the element
+        ar.pop();
+        document.write(ar + "<br>");
+
+        //it will only print that element which will pop out
+        document.write(ar.pop() + "<br>");
+
+        // unshift method
+        document.write("<h2>unshift method</h2>");
+        var ar=['mobile','laptop','computer'];
+        ar.unshift("airpods","earphones");
+        document.write(ar + "<br>");
+
+        // shift method
+        document.write("<h2>shift method</h2>");
+        var ar=['airpods','earphones','mobile','laptop','computer'];
+        ar.shift();
+        document.write(ar + "<br>");
+
+        // slice method
+        document.write("<h2>slice method</h2>");
+        var ar=[1,2,3,4,5,6];
+        document.write(ar.slice(2) + "<br>");
+
+        // this is printing whole array
+        ar.slice(1,5);
+        document.write(ar);
+
+        // this one will print the elements from index 1 to index 4
+        // document.write(ar.slice(1,5) + "<br>");
+
+        // splice method
+        document.write("<h2>splice method</h2>");
+        var ar=[1,2,3,4,5,6];
+
+        // will not print anything beacause it will remove that element
+        // document.write(ar.splice(2,1,"jain") + "<br>"); 
+        
+        //will print the elements which is already present at that index
+        // document.write(ar.splice(2,0,"jain") + "<br>");
+
+        //this one will actaul print the whole array
+        ar.splice(2,0,"jain");
+        document.write(ar); 
+
+        // concat method
+        document.write("<h2>concat method</h2>");
+        let a1=[1,5,7];
+        let a2=[5,7,8,9];
+        document.write(a1.concat(a2));
+
+        // reverse method
+        document.write("<h2>reverse method</h2>");
+        let b1=[1,5,7];
+        document.write(b1.reverse());
+
+        // sort method
+        document.write("<h2>sort method</h2>");
+        var arr=["a","ab","c","bc","b"];
+
+        document.write("<h2>asscending order</h2>");
+        document.write(arr.sort()); 
+
+        document.write("<h2>descending order</h2>");
+        document.write(arr.reverse()); 
+    </script>
+    <!-- push pop slice splice -->
+</body>
+</html>

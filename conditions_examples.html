@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1.if condition
+        document.write("<h2>1. if condition</h2>")
+
+        var arr=[1,2,3,4,5];
+        if(arr[2]==3){
+            document.write(arr[2] + "<br><br>");
+        }
+
+        var day="sunday";
+        if(day=='sunday'){
+            document.write("lets go for outing" + "<br><br>");
+        }
+
+        var a=true;
+        if(a==1){
+            document.write(a + "<br><br>");
+        }
+
+        var u;
+        if(typeof u=='undefined'){
+            document.write(u + "<br><br>");
+        }
+
+        var n=null;
+        if(typeof n=='object'){
+            document.write(n + "<br><br>");
+        }
+
+        // 2.else condition
+        document.write("<h2>2. else condition</h2>")
+
+        var arr=[1,2,3,4,5];
+        var a=prompt("enter a number between 1 to 5")
+        if(arr[2]==a){
+            document.write(arr[2] + "<br><br>");
+        }
+        else{
+            document.write(arr + "<br><br>");
+        }
+
+        var day=prompt("enter a day");
+        if(day=='sunday'){
+            document.write("lets go for movie" + "<br><br>");
+        }
+        else{
+            document.write("go to office" + "<br><br>");
+        }
+
+        var n1=2;
+        var n2=3;
+        var sum=n1+n2;
+        var f=sum%2;
+        if(f==0){
+            document.write("sum is even" + "<br><br>")
+        }
+        else{
+            document.write("sum is odd" + "<br><br>")
+        }
+
+        // var un;
+        // if(un=='undefined'){
+        //     document.write(" is undefined datatype" + "<br><br>");
+        // }
+        // else{
+        //     document.write(" is not undefined datatype" + "<br><br>");
+        // }
+
+        // var nu=null;
+        // if(nu=='null'){
+        //     document.write("The datatype is" + nu + "<br><br>");
+        // }
+        // else{
+        //     document.write("the datatype is not null")
+        // }
+
+        // 3.else if condition
+        document.write("<h2>3. else if condition</h2>")
+
+        var marks = 75;
+        if (marks >= 90) {
+            document.write("Grade A");
+        }
+        else if (marks >= 80) {
+            document.write("Grade B");
+        }
+        else {
+            document.write("Grade C" + "<br><br>");
+        }
+
+        var number = 10;
+        if (number < 0) {
+            document.write("number is negative");
+        }
+        else if (number == 0) {
+            document.write("number is zero");
+        }
+        else {
+            document.write("number is greater than 10" + "<br><br>");
+        }
+
+        // 4.switch case
+        document.write("<h2>4. switch case</h2>")
+
+        var day = 'thursday';
+        
+        switch(day) {
+            case "monday":
+                document.write("today is monday");
+                break;
+            case "tuesday":
+                document.write("today is tuesday");
+                break;
+            case "wednesday":
+                document.write("today is wednesday");
+                break;
+            case "thursday":
+                document.write("today is thursday" + "<br><br>");
+                break;
+            default:
+                document.write("today is sunday");
+        }
+
+        var devices = "mackbook";
+        switch (devices) {
+            case "mobile":
+                document.write("i have mobile");
+                break;
+            case "laptop":
+                document.write("i have laptop");
+                break;
+            case "desktop":
+                document.write("i have desktop");
+                break;
+            default:
+                document.write("i dont have");
+        }
+
+        // 5.nested if else
+        document.write("<h2>5. nested if else</h2>")
+
+        var num1 = 10;
+        var num2 = 20;
+        if (num1 > num2) {
+            document.write("num1 is greater than num2");
+        } else if (num1 < num2) {
+            document.write("num1 is less than num2" + "<br><br>");
+        } else {
+            document.write("num1 is equal to num2");
+        }
+
+        var age_of_p = 10;
+        var age_of_q = 10;
+        if (age_of_p > age_of_q) {
+            document.write("p is greater than q");
+        } else if (age_of_p < age_of_q) {
+            document.write("p is smaller than q");
+        } else {
+            document.write("p and q both are of same age");
+        }
+
+    </script>
+</body>
+</html>

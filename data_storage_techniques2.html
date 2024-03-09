@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Storage Techniques</title>
+</head>
+<body>
+    <script>
+
+        // OBJECTS
+        var product={
+            model:'mercedes',
+            color:'black',
+            price:5000000,
+            desc:'good product'
+        }
+
+        document.write("<h2>object retrieval</h2>");
+
+        console.log(product);
+        // document.write(product + "<br>"); wrong
+
+        document.write(product.model + "<br>");
+        document.write(product.color + "<br>");
+        document.write(product.price + "<br>");
+        document.write(product.desc + "<br>");
+        // document.write(product[desc]+ "<br>"); wrong
+
+        document.write("<h2>object retrieval using loops</h2>");
+
+        for(let i in product){
+            // document.write(product.i + "<br>"); wrong
+            document.write(product[i] + "<br>");
+            // document.write(i + "<br>"); only for keys
+        }
+
+        
+        // ARRAY OF OBJECTS
+
+        var users=[
+            {
+                name:'aaaa',
+                id:'1a',
+                cn:11111111111
+            },
+            {
+                name:'bbbb',
+                id:'2b',
+                cn:2222222222
+            },
+            {
+                name:'cccc',
+                id:'3c',
+                cn:33333333333
+            }
+        ];
+        document.write("<h2>Array of object retrieval</h2>");
+
+        document.write(users[0].id + "<br>");
+        document.write(users[1].name + "<br>");
+        document.write(users[2].cn + "<br>");
+
+        document.write("<h2>Array of object retrieval using loops</h2>");
+
+        for(let i in users){
+            document.write(users[i].name + "<br>");
+        }
+
+        document.write("<br>");
+
+        for(j=0;j<users.length;j++){
+            document.write(users[j].name + "<br>");
+            document.write(users[j].id + "<br>");
+            document.write(users[j].cn + "<br>");
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

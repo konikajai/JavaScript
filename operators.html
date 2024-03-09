@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPERATORS</title>
+</head>
+<body>
+    <!-- Operators
+    1.Arithmatic Operators -->
+
+    <script>
+        var a=5;
+        var b=11;
+        console.log(a+b);
+
+        c=a+b;
+        console.log(c);
+        console.log("the sum is ",c); //16
+        console.log("the sum is " +c); //16
+        console.log("the sum is " +a+b); //the output would be 5511 something like that there is reason behind it that how the opertors perform for strings and for numbers it is differenent.so basically it is not adding it is concatenating the strings.
+        
+        console.log("the sum of " + a + " and " + b + " is: ",c); //16
+        console.log("the sum of " + a + " and " + b + " is: " +c); //16
+ 
+        c=b/a; 
+        console.log(c); //2
+
+        c=b%a;
+        console.log(c); //1
+
+        
+        
+        x="1";
+        y=2;
+        z=3;
+        console.log(x+y+z); //123
+
+        x=1;
+        y="2";
+        z=3;
+        console.log(x+y+z); //123
+
+        x=1;
+        y=2;
+        z="3";
+        console.log(x+y+z); //33
+
+        // 2. UNARY OPERATORS
+        // increment (++)
+        // decrement (--)
+
+        // post increment
+        var a=10;
+        console.log(a++); //a=a+1;
+        console.log(a);
+
+        // pre increment
+        var a=10;
+        console.log(++a);
+        console.log(a);
+
+        // post decrement
+        var a=10;
+        console.log(a--);
+        console.log(a);
+
+        // pre decrement
+        var a=10;
+        console.log(--a);
+        console.log(a);
+
+        //3.ASSIGNMENT OPERATORS
+
+        var a=5;
+        a+=6; //a=a+6
+        console.log(a); //11
+
+        var b=5;
+        b=b*3; //b*=3;
+        console.log(b); //15
+
+        // 4.COMPARISON OPERATOR
+
+        var a=10;
+        var b=3;
+        console.log(a==b);
+        console.log(a!=b);
+
+        var x=10;
+        var y='10';
+        console.log(x==y); //compare only values so returning true
+
+        console.log(x===y);//compare values and datatypes both so returning false
+
+        // 5.LOGICAL OPERATOR
+
+        // AND
+        var c=2;
+        var d=3;
+        var e=4;
+        console.log(c<d && d>e); //false
+        // OR
+        console.log(c<d || d>e); //true
+        // NOT
+        console.log(!(c<d)); //false
+
+        // 6.BITWISE OPERATOR
+
+        // 7.TERNARY OPERATOR
+        // SYNTAX:-(condition)? expression1:exxpression2;
+
+        var f=6;
+        var g=5;
+        (g>f)? console.log("f is greater"): console.log("g is greater");
+
+    </script>
+</body>
+</html>

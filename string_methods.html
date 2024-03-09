@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRING METHODS</title>
+</head>
+<body>
+    
+    <!-- string methods
+        length()
+        substring()
+        indexOf()
+        toUpperCase()
+        toLowerCase()
+        replace()
+        replaceAll()
+        charAt()
+        concat()
+        slice()
+        trim()
+        starttrim()
+        lasttrim()
+     -->
+
+    <script>
+        // length method
+        documnet.write("<h2>length method</h2>")
+        var a="konika";
+        // var a='"konika"';
+        // var a="'konika'";
+        document.write(a.length + "<br>");
+
+        // indexOf method
+        document.write("<h2>indexOf method</h2>");
+        var b="konika jain";
+        document.write(b.indexOf("jain" + "<br>"));
+        // document.write(b.indexOf('hello' + "<br>")); -1
+
+        // substring method
+        document.write("<h2>substring method</h2>");
+        var c="konika";
+        document.write(c.substring(1,4) + "<br>");
+
+        // toUpperCase method
+        let name='konika jain';
+        document.write(name + "<br>");
+
+        document.write("<h2>toUpperCase method</h2>");
+        // let name2=name.toUpperCase();
+        // document.write(name2 + "<br>");
+        document.write(name.toUpperCase() + "<br>");
+
+        // toLowerCase method
+        document.write("<h2>toLowerCase method</h2>");
+        document.write(name2.toLowerCase() + "<br>");
+
+        // replace method
+        document.write("<h2>replace method</h2>");
+        let str="hi how are you hi hello";
+        document.write(str.replace("hi",'hey') + "<br>");
+        document.write(str.replaceAll("hi",'hey') + "<br>");    
+
+        // charAt method
+        document.write("<h2>charAt method</h2>");
+        var s='hello';
+        document.write(s.charAt(2) + "<br>");
+
+        // concat method
+        document.write("<h2>concat method</h2>");
+        var s1="all ";
+        var s2="good";
+        document.write(s1.concat(s2) + "<br>");
+        document.write(s1 + " " +  s2 + "<br>");
+
+        // slice method
+        document.write("<h2>slice method</h2>");
+        var st="hi hello how are you all good";
+        document.write(st.slice(7) + "<br>");
+        document.write(st.slice(7,13) + "<br>");
+
+        // only change first letter to uppercase
+        document.write("<h2>example of multiple method</h2>");
+        let n="konika";
+        document.write(n.charAt(0).toUpperCase() + n.slice(1) + "<br>")
+
+        // trim method
+        document.write("<h2>trim method</h2>");
+        var m="konika jain  ";
+        document.write(m.trim());
+
+        document.write("<h2>example of multiple method</h2>");
+        var k="konikajain";
+        document.write(k.replace('konika','hi' + k.slice(6)));
+    </script>
+</body>
+</html>

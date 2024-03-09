@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Storage Techniques</title>
+</head>
+<body>
+    <!-- 
+        String
+        Array
+        Objects
+        Array of objects
+     -->
+
+     <script>
+        // String Literal
+        document.write("<h2>STRING LITERAL</h2>")
+        var a="konika";
+        document.write(a + "<br>");
+        document.write(typeof a + "<br>");
+        var a="jain";
+        document.write(a + "<br>");
+
+         // String Constructor
+        document.write("<h2>STRING CONSTRUCTOR</h2>")
+        var b= new String("konika");
+        document.write(b + "<br>");
+        document.write(typeof b + "<br>");
+
+        // var name= new String("konika");
+        // document.write(name + "<br>");
+        // document.write(typeof name); //string why ?
+
+        // Array Literal
+        document.write("<h2>ARRAY LITERAL</h2>")
+        var c=['k','o','n','i','k','a'];
+        document.write(c + "<br>");
+        document.write(typeof c + "<br>");
+
+        // Array Constructor
+        document.write("<h2>ARRAY CONSTRUCTOR</h2>")
+        var d= new Array('k','o','n','i','k','a');
+        document.write(d + "<br>");
+        document.write(typeof d + "<br>");
+
+        // RETRIEVEAL USING MANUAL METHOD
+        document.write("<h2>RETRIEVEAL USING MANUAL METHOD</h2>")
+        document.write(c[0] + "<br>");
+        document.write(c[1] + "<br>");
+        document.write(c[2] + "<br>");
+        document.write(c[3] + "<br>");
+        document.write(c[4] + "<br>");
+        document.write(c[5] + "<br>");
+
+
+        // RETRIEVEAL USING lOOPS METHOD
+        document.write("<h2>RETRIEVEAL USING LOOPS METHOD</h2>")
+        for(let i=0;i<=6;i++){   //i<c.length i<=c.length-1
+            document.write(c[i] + "<br>");
+        }
+         
+     </script>
+</body>
+</html>
