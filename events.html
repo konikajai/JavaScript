@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events in js</title>
+</head>
+<body>
+<!-- <input type="button" id="my_button" value="BUTTON!"> -->
+
+<script>
+    document.write("MOUSE EVENTS");
+    // click
+    // document.write('click');
+    // document.querySelector("#my_button").addEventListener('click',function(){
+    //     alert("button is pressed and released");
+    // })
+
+    // // dblclick
+    // document.write('dblclick');
+    // document.querySelector("#my_button").addEventListener('dblclick',function(){
+    //     alert("button is pressed 2 times");
+    // })
+
+    // // mousedown
+    // document.write('mousedown');
+    // document.querySelector("#my_button").addEventListener('mousedown',function(){
+    //     alert("button is pressed");
+    // })
+
+    // // mouseup
+    // document.write('mouseup');
+    // document.querySelector("#my_button").addEventListener('mouseup',()=>{
+    //     alert("button is released");
+    // })
+
+    // mouseenter
+    // document.write('mouseenter');
+    // document.querySelector("#my_button").addEventListener('mouseenter',()=>{
+    //     alert("mouse is hoverd");
+    // })
+
+    // // mouseleave
+    // document.write('mouseleave');
+    // document.querySelector("#my_button").addEventListener('mouseleave',()=>{
+    //     alert("mouse has leaved the element");
+    // })
+
+    // // mousemove
+    // document.write('mousemove');
+    // document.querySelector("#my_button").addEventListener('mousemove',()=>{
+    //     alert("mouse is moving on element");
+    // })
+
+    // // contextmenu
+    // document.write('contextmenu');
+    // document.querySelector("#my_button").addEventListener('contextmenu',()=>{
+    //     alert("right button got pressed");
+    // })
+
+    document.write("<br>");
+    document.write("KEYBOARD EVENTS");
+
+    // keydown
+    // document.write('keydown');
+    // document.addEventListener('keydown',()=>{
+    //     alert("key is pressed down from keyboard");
+    // })
+
+    // keyup
+    // document.write('keyup');
+    // document.addEventListener('keyup',()=>{
+    //     alert("key is pressed down and released from keyboard");
+    // })
+
+    // when we wants to know which is pressed so for that we use bectic operators
+    // document.addEventListener('keydown',(para)=>{
+    //     alert(`key is pressed : ${para.key}`);
+    // })
+
+    // document.addEventListener('keyup',(para)=>{
+    //     alert(`key is released : ${para.key}`);
+    // })
+
+    // keypress
+    // document.write('keypress');
+    // document.addEventListener('keypress',()=>{
+    //     alert("key is pressed from keyboard");
+    // })
+
+    // document.write('keydown with modifiers');
+    //keydown with modifiers
+    // ctrl + a ,shift +alt all that
+
+
+    // CHATGPT
+    document.addEventListener("keydown", function(event) {
+    // Check if the 'e' key is pressed with Ctrl key held down
+    if (event.key === 'e' && event.ctrlKey) {
+        alert("Ctrl + E was pressed");
+    }
+
+    // Check if the 'e' key is pressed with Shift key held down
+    if (event.key === 'e' && event.shiftKey) {
+        alert("Shift + E was pressed");
+    }
+
+    // Check if the 'e' key is pressed with Alt key held down
+    if (event.key === 'e' && event.altKey) {
+        alert("Alt + E was pressed");
+    }
+});
+
+
+
+    
+</script>
+</body>
+</html>

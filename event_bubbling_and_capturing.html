@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event bubbling and capturing</title>
+</head>
+<style>
+    #e1,#e2,#e3{
+        border:1px solid blue;
+        padding:30px;
+        text-align: center;
+    }
+</style>
+<body>
+
+    <div id="e1">
+        1
+        <div id="e2">
+            2
+            <div id="e3">
+                3
+            </div>
+        </div>
+    </div>
+    <script>
+        // event bubbling
+
+        // event bubbling - trigger the event from bottom to top (child to parent)
+        // (for bubbling we pass the false parameter and bydefault already is false)
+
+        // document.getElementById('e1').addEventListener('click',()=>{
+        //     alert('e1 is clicked')
+        // });
+        // document.getElementById('e2').addEventListener('click',()=>{
+        //     alert('e2 is clicked')
+        // });
+        // document.getElementById('e3').addEventListener('click',()=>{
+        //     alert('e3 is clicked')
+        // },false);
+
+        // stopPropation method
+
+        // if we dont want this propagation from bottom to top we can stop it by passing an parameter and using this stopPropagation method
+
+        // document.getElementById('e1').addEventListener('click',()=>{
+        //     alert('e1 is clicked')
+        // });
+        // document.getElementById('e2').addEventListener('click',(p2)=>{
+        //     p2.stopPropagation();
+        //     alert('e2 is clicked')
+        // });
+        // document.getElementById('e3').addEventListener('click',(p3)=>{
+        //     p3.stopPropagation();
+        //     alert('e3 is clicked')
+        // },false);
+
+        // event capturing - trigger the event from top to bnottom (parent to parent)
+        // (for capturing we pass the true parameter)
+
+        // document.getElementById('e1').addEventListener('click',()=>{
+        //     alert('e1 is clicked')
+        // },true);
+        // document.getElementById('e2').addEventListener('click',()=>{
+        //     alert('e2 is clicked')
+        // },true);
+        // document.getElementById('e3').addEventListener('click',()=>{
+        //     alert('e3 is clicked')
+        // },true);
+
+        // examples
+
+        // document.getElementById('e1').addEventListener('click',()=>{
+        //     alert('e1 is clicked')
+        // },false);
+        // document.getElementById('e2').addEventListener('click',()=>{
+        //     alert('e2 is clicked')
+        // },true);
+        // document.getElementById('e3').addEventListener('click',(e3)=>{
+        //     alert('e3 is clicked')
+        // },true);
+
+        // document.getElementById('e1').addEventListener('click',()=>{
+        //     alert('e1 is clicked')
+        // },true);
+        // document.getElementById('e2').addEventListener('click',()=>{    
+        //     alert('e2 is clicked')
+        // },true);
+        // document.getElementById('e3').addEventListener('click',(e3)=>{
+        //     alert('e3 is clicked')
+        // },false);
+
+        document.getElementById('e1').addEventListener('click',(para2)=>{
+            alert('e1 is clicked')
+        },false);
+        document.getElementById('e2').addEventListener('click',(para2)=>{
+            alert('e2 is clicked')
+        },true);
+        document.getElementById('e3').addEventListener('click',(para3)=>{
+            para3.stopPropagation();
+            alert('e3 is clicked')
+        });
+    </script>
+</body>
+</html>

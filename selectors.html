@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in javascript</title>
+    <style>
+        .firstdiv{
+            color:blue;
+            background-color: pink;
+            padding:10px;
+        }
+        .section{
+            padding:10px;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        1.getElementByTagName():
+        2.getElementByClassName()
+        3.getElementByIdName()
+        4.querySelector()
+        5.querySelectorAll()
+     -->
+
+    <div>HTML</div>
+    <section>CSS</section>
+    <div>JAVASCRIPT</div>
+    <section>BOOTSTRAP</section>
+    <section>BOOTSTRAP</section>
+    <section>BOOTSTRAP</section>
+    <section>BOOTSTRAP</section>
+    <section>BOOTSTRAP</section>
+    <section>BOOTSTRAP</section>
+
+    <script>
+        // 1.getElementByTagName():
+        
+        console.log(document.getElementsByTagName('div')); //will return a array 
+
+        document.getElementsByTagName('div')[1].style.border="1px solid red"
+        document.getElementsByTagName('section')[0].style.backgroundColor="yellow"
+        document.getElementsByTagName('section')[1].style.backgroundColor="green"
+
+        // document.getElementsByTagName('div')[0].style.border="1px solid blue"
+        // document.getElementsByTagName('div')[0].style.backgroundColor="pink"
+        // document.getElementsByTagName('div')[0].style.padding="10px"
+        // rather then writing properties in each line we can use classlist
+        document.getElementsByTagName('div')[0].classList="firstdiv"
+        console.log(document.getElementsByTagName('div')[0]); //will show the class name
+        
+
+        /*document.getElementsByTagName('section')[0].classList="section"
+        document.getElementsByTagName('section')[1].classList="section"
+        document.getElementsByTagName('section')[2].classList="section"
+        document.getElementsByTagName('section')[3].classList="section"
+        document.getElementsByTagName('section')[4].classList="section"
+        document.getElementsByTagName('section')[5].classList="section"
+        document.getElementsByTagName('section')[6].classList="section"*/
+        // rather then this repettion we will use loop
+
+        let list=document.getElementsByTagName('section')
+        for(let i=0;i<list.length;i++){
+            list[i].classList="section"
+        }
+        
+
+    </script>
+</body>
+</html>

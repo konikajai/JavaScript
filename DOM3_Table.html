@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE USING DOM</title>
+
+    <!-- <style>
+        table,th,td{
+            border:1px solid black;
+        }
+    </style> -->
+</head>
+<body>
+     <!-- <table>
+        <tr>
+            <th>s.no.</th>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>konika</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>kapila</td>
+            <td>25</td>
+        </tr>
+     </table> -->
+
+     <div id="tb"></div>
+
+     <script>
+        let table = document.createElement('table');
+
+        let t_row1 = document.createElement('tr');
+        let t_row2 = document.createElement('tr');
+        let t_row3 = document.createElement('tr');
+
+        let row1_th1 = document.createElement('th');
+        let row1_th2 = document.createElement('th');
+        let row1_th3 = document.createElement('th');
+
+        let row2_td1 = document.createElement('td');
+        let row2_td2 = document.createElement('td');
+        let row2_td3 = document.createElement('td');
+
+        let row3_td1 = document.createElement('td');
+        let row3_td2 = document.createElement('td');
+        let row3_td3 = document.createElement('td');
+
+        table.appendChild(t_row1);
+        table.appendChild(t_row2);
+        table.appendChild(t_row3);
+
+        t_row1.appendChild(row1_th1);
+        t_row1.appendChild(row1_th2);
+        t_row1.appendChild(row1_th3);
+
+        t_row2.appendChild(row2_td1);
+        t_row2.appendChild(row2_td2);
+        t_row2.appendChild(row2_td3);
+
+        t_row3.appendChild(row3_td1);
+        t_row3.appendChild(row3_td2);
+        t_row3.appendChild(row3_td3);
+
+        row1_th1.innerText="s.no.";
+        row1_th2.innerText="name";
+        row1_th3.innerText="age";
+        row2_td1.innerText="1";
+        row2_td2.innerText="konika";
+        row2_td3.innerText="22";
+        row3_td1.innerText="2";
+        row3_td2.innerText="kapila";
+        row3_td3.innerText="25";
+        
+        console.log(table);
+
+        document.querySelector('body').appendChild(table);
+
+        document.getElementsByTagName('table')[0].style.border="1px solid black";
+
+        let theading=document.getElementsByTagName('th');
+        for(i=0;i<theading.length;i++){
+            theading[i].style.border="1px solid black;"
+        }
+
+        let tdata=document.getElementsByTagName('td');
+        for(j=0;j<tdata.length;j++){
+            tdata[j].style.border="1px solid black;"
+        }
+
+        // create table using bectic operator
+        
+        let table2=`<table>
+            <tr>
+                <th>s.no.</th>
+                <th>name</th>
+                <th>age</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>konika</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>kapila</td>
+                <td>25</td>
+            </tr>
+        </table>`
+
+        console.log(table2);
+        // document.getElementsByTagName('body')[0].innerHTML=table2;
+        document.getElementById('tb').innerHTML=table2;
+
+
+
+
+     </script>
+</body>
+</html>

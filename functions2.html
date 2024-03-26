@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS2</title>
+</head>
+<body>
+    <script>
+        // callback function
+        document.write("<h2>callback function</h2>");
+        function greet1(parameter){
+            document.write("good morning" + "<br>");
+            parameter();
+        }
+        function greet2(){
+            document.write("good afternoon" + "<br>");
+        }
+        greet1(greet2);
+
+        // nested function
+        document.write("<h2>nested function</h2>");
+        function outer(){
+            let outervar="its an outer function";
+
+            function inner(){
+                document.write(outervar);
+            }
+            inner();
+        }
+        outer();
+
+        document.write("<br>");
+ 
+        // recursive function
+        document.write("<h2>recursive function</h2>");
+        function factorial(n){
+            if(n==0){
+                return 1;
+            }
+            else{
+                return n*factorial(n-1);
+            }
+        }
+        document.write("the factorial is " + factorial(5));
+
+        // IIFA function
+        document.write("<h2>IIFA function</h2>");
+        // not working
+        /*(function factorial(n){
+            if(n==0){
+                return 1;
+            }
+            else{
+                return n*factorial(n-1);
+            }
+        })
+        ();*/
+
+        // arrow function
+        document.write("<h2>arrow function</h2>");
+        let add =(c,d)=>{return c+d};
+        document.write(add(2,3));
+
+        // ES6 function
+        // when we do not wants to return
+        document.write("<h2>ES6 function</h2>");
+        let addition =(e,f)=>(e + f);
+        document.write(addition(3,3));
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PART2</title>
+</head>
+<body>
+
+    <!-- <figure>
+        <img src="./The Cupcake Crafting.png" alt="cupcake">
+        <figcaption>The Cupcake Crafting</figcaption>
+    </figure> -->
+
+    <!-- WE CAN WRITE HTML CODE USING DOM METHOD IN JAVASCRIPT-->
+
+    <div id ="icon"></div>
+
+    <script>
+        // create element
+        let fig=document.createElement('figure');
+
+        let img=document.createElement('img');
+
+        // setting attribues in the element
+        img.setAttribute("src","./The Cupcake Crafting.png");
+        img.setAttribute("alt","The Cupcake Crafting");
+
+        let figcap=document.createElement('figcaption');
+
+        // create seperate text content
+        let figtext=document.createTextNode("The Cupcake Crafting")
+
+        // append this text content in figcaption
+        figcap.appendChild(figtext);
+
+        // rathher then upper two steps we can directly add the text in figcap using innerText
+        // figcap.innerText="The Cupcake Crafting"
+
+        // append img tag and figcaption in the figure
+        fig.appendChild(img);
+        fig.appendChild(figcap);
+
+        console.log(fig);
+
+        // now we will have to append the figure tag into the body tag
+        document.getElementsByTagName('body')[0].appendChild(fig);
+
+
+        // so for creating only figure tag we have wriiten multiple lines of code so rather then this we can do it using bectic operator.
+        // so what actually happens we will pass the html code as an multi line string to the variable and we will give this variable to any tag.
+
+        let fig2=`<figure>
+            <img src="./The Cupcake Crafting.png" alt="cupcake">
+            <figcaption>The Cupcake Crafting</figcaption>
+            </figure>`;
+
+        // we can give it body
+        // document.getElementsByTagName('body')[0].innerHTML=fig2;
+
+        // we can give it to any element we want
+        document.getElementById('icon').innerHTML=fig2;
+        
+
+        // so here we can not use appendChild because we are not passing an element to another element we are passing an string to an element,so we will use innerHTML.
+
+        // and we can not use even textContent and innerText because they will take whole figure tag as a text
+    </script>
+</body>
+</html>

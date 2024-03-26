@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORS</title>
+    <style>
+        .cl{
+            color:red;
+            background-color:yellow;
+        }
+        .qsl{
+            color:red;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <section class="s1">1</section>
+    <section class="s1">2</section>
+    <section class="s1">3</section>
+    <div id="i1">4</div>
+    <div class="q1">4</div>
+    <div class="q1">4</div>
+    <div class="div">
+        <div>division1</div>
+        <div>division2</div>
+    </div>
+    <div class="q2">4</div>
+    <div class="q2">4</div>
+    <div class="div2">
+        <div>division1</div>
+        <div>division2</div>
+    </div>
+
+    <script>
+        // 2..getElementByClassName()";
+        console.log(document.getElementsByClassName('s1'));
+
+        document.getElementsByClassName('s1')[1].classList="cl"
+
+        // document.getElementsByClassName('s1')[0].style.margin="10px"
+         // document.getElementsByClassName('s1')[0].style.padding="10px"
+        // document.getElementsByClassName('s1')[1].style.margin="10px"
+        // document.getElementsByClassName('s1')[2].style.margin="10px"
+
+        // let l1=document.getElementsByClassName('s1')
+        // l1[2].style.border="1px solid blue"
+
+        let l1=document.getElementsByClassName('s1')
+        for(let i=0;i<l1.length;i++){
+            l1[i].style.backgroundColor="pink"
+        }
+
+        // 3.getElementByIdName()
+        //does not return array
+        //dont use loops 
+        document.getElementById('i1').style.backgroundColor="brown"
+
+        // 4.querySelector()
+        //will target only first occurance
+        //we can use any css sselector inside it
+        //does not return array
+        //dont use loops 
+        document.querySelector('.q1').style.backgroundColor="green"
+        document.querySelector('.div div').style.backgroundColor="yellow"
+
+        // 5.querySelectorAll()
+        //will target all the occurance
+        document.querySelectorAll('.q2').style.backgroundColor="green"
+        document.querySelectorAll('.div2 div').style.backgroundColor="yellow"
+
+        // let list=document.querySelectorAll('.div2 div')
+        // for(let i=0;i<list.length;i++){
+        //     list[i].classList="qsl"
+        // }
+
+
+        
+
+
+    </script>
+</body>
+</html>

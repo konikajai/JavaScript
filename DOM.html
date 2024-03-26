@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <!-- 
+        DOM PROPERTIES
+        innerHTML
+        innerText
+        textContent
+        setAttribute
+        getAttribute
+        appendChild
+        append
+        createTextNode
+     -->
+    <div id="division">AIT Marathali</div>
+
+    <div id="division2">
+        <p>Achivers IT</p>
+    </div>
+
+    <div id="division3">my name is <b style="display:none">konika</b> jain</div>
+
+    <script>
+        document.getElementById('division').textContent="Konika";
+        // document.getElementById('division').innertext="Konika"; can not do that
+        
+        document.getElementById('division2').innerHTML="<h1>KONIKA JAIN</h1>";
+        document.getElementById('division2').innerText="<h1>KONIKA JAIN</h1>";
+
+
+        console.log(division3.innerText);
+        console.log(division3.innerHTML);
+        console.log(division3.textContent);
+    </script>
+</body>
+</html>
