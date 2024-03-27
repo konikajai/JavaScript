@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION(EMAIL AND PASSWORD VALIDATION)</title>
+    <style>
+        div{
+            border:1px solid blue;
+            margin:50px 100px;
+            padding:30px 50px;
+            width:220px;
+            border-radius:10px;
+        }
+        h1{
+            color:blue;
+        }
+        #Eerr,#Perr{
+            display:none;
+        }
+        #Eerr2,#Perr2{
+            display:none;
+        }
+        input{
+            margin:5px;
+            padding:5px;
+            border-radius: 10px;
+        }
+        label{
+            margin:5px;
+        }
+        sup{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login Form</h1>
+        <form>
+            <label for="email">Email<sup>*</sup></label>
+            <input type="text" id="email" placeholder="enter your email">
+            <h3 id="Eerr">enter your email</h3>
+            <h3 id="Eerr2">enter correct email</h3>
+            <label for="password">Password<sup>*</sup></label>
+            <input type="text" id="password"  placeholder="enter your password">
+            <h3 id="Perr">enter your password</h3>
+            <h3 id="Perr2">enter correct password</h3>
+            <input type="button" id="login" value="Login Now"> 
+        </form>
+        <h4>Forgot Password? <a href="">click here</a></h4>
+        <h4>Don't have an Account <a href="">click here</a></h4>
+    </div>
+
+    <script>
+        document.getElementById('Eerr').style.color="red"
+        document.getElementById('Perr').style.color="red"
+
+        document.getElementById('Eerr2').style.color="red"
+        document.getElementById('Perr2').style.color="red"
+
+        document.getElementById('login').addEventListener('click',()=>{
+
+            let em=document.getElementById('email').value;
+            let pwd=document.getElementById('password').value;
+            
+            if(em==''){
+                document.getElementById('Eerr').style.display="block";
+            }
+            else if(em!='konikajain1572001@gmail.com'){
+                document.getElementById('Eerr2').style.display="block";
+            }
+            else{
+                document.getElementById('Eerr2').style.display="none";
+                // alert('logged in')
+            }
+
+            if(pwd==''){
+                document.getElementById('Perr').style.display="block";
+            }
+            else if(pwd!='koni@123'){
+                document.getElementById('Perr2').style.display="block";
+            }
+            else{
+                document.getElementById('Perr2').style.display="none";
+                    
+            }
+
+            if(em=='konikajain1572001@gmail.com' && pwd=='koni@123') {
+                alert("Successfully logged in");
+            }         
+        })
+    </script>
+</body>
+</html>

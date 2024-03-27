@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <style>
+        div{
+            border:1px solid blue;
+            margin:50px 100px;
+            padding:30px 50px;
+            width:220px;
+            border-radius:10px;
+        }
+        h1{
+            color:blue;
+        }
+        #Eerr,#Perr{
+            display:none;
+        }
+        input{
+            margin:5px;
+            padding:5px;
+            border-radius: 10px;
+        }
+        label{
+            margin:5px;
+        }
+        sup{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login Form</h1>
+        <form>
+            <label for="email">Email<sup>*</sup></label>
+            <input type="text" id="email" placeholder="enter your email">
+            <h3 id="Eerr">enter your email</h3>
+            <label for="password">Password<sup>*</sup></label>
+            <input type="text" id="password" placeholder="enter your password">
+            <h3 id="Perr">enter your password</h3>
+            <input type="button" id="login" value="Login Now"> 
+        </form>
+        <h4>Forgot Password? <a href="">click here</a></h4>
+        <h4>Don't have an Account <a href="">click here</a></h4>
+    </div>
+
+    <script>
+        document.getElementById('Eerr').style.color="red"
+        document.getElementById('Perr').style.color="red"
+
+        document.getElementById('login').addEventListener('click',()=>{
+
+            let em=document.getElementById('email').value;
+            let pwd=document.getElementById('password').value;
+            
+            if(em==''){
+                document.getElementById('Eerr').style.display="block";
+            }
+            else{
+                document.getElementById('Eerr').style.display="none";
+            }
+     
+            
+            if(pwd==''){
+                document.getElementById('Perr').style.display="block";
+            }
+            else{
+                document.getElementById('Perr').style.display="none"
+            }  
+            
+            if(em!='' && pwd!='') {
+                alert("Successfully logged in");
+            } 
+        })
+    </script>
+</body>
+</html>
