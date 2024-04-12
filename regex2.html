@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex part2</title>
+</head>
+<body>
+    <script>
+        // <!-- literal method -->
+        
+        const str1="hello all Hello";
+        const regex1 = /hello/gi;
+        console.log(str1.match(regex1));
+
+        // <!-- constructor method -->
+        
+        const str2="hello all Hello";
+        const regex2 = new RegExp('hello','gi');
+        console.log(str2.match(regex2));
+
+        // take pattern from user in constructor method
+        const pattern = prompt("enter any pattern");
+        const regex3 = new RegExp(`${pattern}`,'gi');
+        const str3 = "hi my name is konika. hi.";
+        console.log(str3.match(regex3));
+
+        /*special character
+
+        anchor
+           ^
+           $
+        
+        boundaries
+*/
+        const str4 = "me and you";
+        const regex4 = /^me/;
+        console.log(regex4.test(str4));
+        // console.log(regex4.test("me and you"));
+
+        const str5 = "me and you";
+        const regex5 = /you$/;
+        console.log(regex5.test(str5));
+
+        const str8 = "me and you";
+        const regex8 = /you$/;
+        console.log(str8.match(regex8));
+
+        const str6="me and you";
+        const regex6 = new RegExp('you$','gi');
+        console.log(regex6.test(str6));
+
+    </script>
+</body>
+</html>

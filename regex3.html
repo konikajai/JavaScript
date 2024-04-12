@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex3</title>
+</head>
+<body>
+    <script>
+        /*
+        Special charcters
+
+        boundaries:
+            \b:
+            \w:alphanumeric [A-Za-z0-9]
+            \s:matches white space CharacterData
+            .:matches any character
+            /d: [0-9]
+
+        Character class:[]
+        Negated chaarcter class:[^]
+
+        Range:[A-Z]
+              [a-z]
+              [6-9]
+              [0-9] (/d)
+
+        Alternation:
+
+        Quantifiers :
+        + :
+        * :
+
+        */
+
+        // boundaries \b
+        str1 = "backward wardrobe ward";
+        regex1 = /\bward/g;
+        console.log(regex1.test(str1));
+        console.log(str1.match(regex1));
+5
+        str1 = "backward wardrobe ward";
+        regex1 = /\bward\b/g;
+        console.log(str1.match(regex1));
+
+        // Character class:[]
+        const regex2 = /ambi[ae]nce/;
+        console.log(regex2.test("ambience"));
+
+        // Negated chaarcter class:[^]
+        const regex3 = /[^bch]at/;
+        console.log(regex3.test("fat"));
+
+        // Alternation:
+        const regex4 = /(konika|madhavi )\sjain/;
+        console.log(regex4.test("konika jain"));
+        console.log(regex4.test("madhavi jain"));
+
+        // Quantifiers :
+
+        // +:
+        const regex5 = /hel+o/;
+        console.log(regex5.test("hellllllo"));
+
+        // *:
+        const regex6 = /hel*o/;
+        console.log(regex6.test("heo"));
+
+        // ?:
+        const regex7 = /colou?r/;
+        console.log(regex7.test("colour"));
+        console.log(regex7.test("color"));
+
+        // {n}: number(total digits)
+        // {n,m} minimum digit,maximum digit
+        // { ,m}
+        // {n, }
+        const regex8 = /\d{10}/;
+        console.log("1234567890");
+
+    </script>
+</body>
+</html>

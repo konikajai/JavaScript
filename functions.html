@@ -14,21 +14,22 @@
         }
         add(2,3);
 
-        //various functions
-        // function without parameters
-        // function with parameters
-        // function with return statement
-        // function with default parameters
-        // Named function /function with a name
-        // Anonymous function /function without a name
-        // variable function
-        // callback function
-        // nested function
-        // recursive function
-        // IIFA (Immediately Invoked Function Expression)
-        // ES6 + 
-        //     -Arrow function
+       /* various functions
+        function without parameters
+        function with parameters
+        function with return statement
+        function with default parameters
+        Named function /function with a name
+        Anonymous function /function without a name
+        variable function
+        callback function
+        nested function
+        recursive function
+        IIFA (Immediately Invoked Function Expression)
+        ES6 + 
+            -Arrow function*/
 
+        // function without parameters
         document.write("<h2>manual function (function without passing parameters)</h2>");
         function calc_gst(){
             let price=1000;
@@ -40,6 +41,7 @@
         document.write("<br>");
         calc_gst();
 
+        // function with parameters
         document.write("<h2>function by passing parameters</h2>");
         function gst(price,gp){
             let totalprice=price +(price*gp/100);
@@ -49,18 +51,61 @@
         document.write("<br>");
         gst(2000,7);
 
+        // function with return statement
         document.write("<h2>function using return statement</h2>");
-        function g(price,gp){
+        function gs(price,gp){
             let totalprice=price +(price*gp/100);
             return totalprice;
         }
-        let a = g(1000,10);
+        let a = gs(1000,10);
         document.write(a + "<br>");
 
-        let b = g(2000,10);
-        document.write(b);
-        
+        //when we return we can not direct call it we will have to call it in a variable or either will have to call it in print statement.
 
+        let b = gs(2000,10);
+        document.write(b);
+
+        // function with default parameter
+        document.write("<h2>function with default parameter</h2>");
+        function g(price,gp=12){
+            let totalprice=price +(price*gp/100);
+            return totalprice;
+        }
+        var c = g(1000);
+        document.write(c + "<br>");
+        var d = g(1000,10);
+        document.write(d + "<br>");
+
+        // Anonymous function /function without a name
+        document.write("<h2>Anonymous function /function without a name by calling it setTimeout</h2>");
+        setTimeout(function(){
+            document.write("This page is not responding" + "<br>");
+        },3000)
+
+        /* setTimeout(gst(4000,15){
+             document.write("hi");
+         },3000)
+        can we call a function with a name in setTimeout ?
+        can we pass parameters in the function which is inside setTimeout function
+        */
+
+        // setTimeout(function(m,n){
+        //     return m+n;
+        // },5000)
+        // document.write(setTimeout(2,4));
+
+        document.write("<h2>Anonymous function by passing in a variable</h2>");
+        z=function(){
+            document.write("Anonymous function example");
+        }
+        setTimeout(z,4000);
+
+        //variable function
+        document.write("<h2>variable function</h2>");
+        let addition = function(x,y){
+            document.write(x+y);
+        }
+        addition(2,3); 
 
     </script>
 </body>

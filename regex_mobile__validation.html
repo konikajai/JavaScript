@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex mobile number validation</title>
+</head>
+<body>
+    <label for="mobile">Mobile Number</label>
+    <input type="text" name="mobile" id="mobile" placeholder="enter your mobile number">
+    <button onclick="validate_mobile_number()">Validate</button>
+    <p id="message">The number is validated!</p>
+
+    <script>
+        function validate_mobile_number(){
+            const mobile_number = document.getElementById('mobile').value;
+            const regex = /^[6-9]\d{9}$/;
+            if(regex.test(mobile_number)){
+                document.getElementById('message').textContent="VALID";
+                document.getElementById('message').style.color="green";
+                document.getElementById('mobile').style.border="1px solid green";
+            }
+            else{
+                document.getElementById('message').textContent="INVALID";
+                document.getElementById('message').style.color="red";
+                document.getElementById('mobile').style.border="1px solid red";
+            }
+        }
+    </script>
+</body>
+</html>

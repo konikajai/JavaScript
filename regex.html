@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex in javascript</title>
+</head>
+<body>
+    <!-- Regular Expression(RegEx)
+    
+    validate indian mobile number
+    -10 digits
+    -should start with only 6,7,8,9
+    -can not contain alphabets -->
+
+    <script>
+        let number = /^[6-9]\d{9}$/
+        /*how to create regex
+
+        1.regex literal
+        let a= /pattern/; without a flag
+        let b= /pattern/flags; with a flag
+
+        2.regex constructor
+        let c= new RegExp("pattern"); without a flag
+        let d= new RegExp('pattern','flags'); with a flag*/
+
+        /* Flags
+
+        g - global searching
+        i - case - insensitive searching
+
+        let b= /pattern/g;
+        let b= /pattern/i;
+
+        let d= new RegExp('pattern','g');
+        let d= new RegExp('pattern','i');
+
+        global searching works as replace all method it takes all the occurance of an string which we are finding if there is "hellohello" string and we are finding hello so it will take as 2 occurance of hello.
+
+        insensitive searching if the searching string is in uppercase and there is string present in lowercase but the words are same so it will count that occurance also.*/
+    </script>
+</body>
+</html>

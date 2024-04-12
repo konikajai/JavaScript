@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <form>
+        <h2>New User Signup</h2> 
+        <input type="text" name="user_name" id="user_name" placeholder="username">
+        <p id="user_name_message">Username must be and contain 5-12 character</p>
+        <input type="text" name="email" id="email" placeholder="email">
+        <p id="email_message">Email must be a valid address, e.g. me@mydomain.com</p>
+        <input type="password" name="password" id="password" placeholder="password">
+        <p id="password_message">password must alphanumeric (@,_and -  are also allowed) and be 8-20 characters</p>
+        <input type="text" name="telephone" id="telephone" placeholder="telephone">
+        <p id="telephone_message">Telephone must be a valid indian number(10 digits)</p>
+        <button id="button">submit</button> 
+        <!-- <button onclick="validation()">submit</button> without form tag -->
+        <!-- <input type="button" value="submit" name="submit" id="button" onclick="validation()"> -->
+        </form>
+    <script src="./JAVASCRIPT/script.js"></script>
+</body>
+</html>

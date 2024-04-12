@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex email validation</title>
+</head>
+<body>
+    <label for="email">EMAIL</label>
+    <input type="text" name="email" id="email" placeholder="enter your Email Address">
+    <button onclick="validate__email_address()">Validate</button>
+    <p id="message">The Email is validated!</p>
+
+    <script>
+        function validate__email_address(){
+            const email_address = document.getElementById('email').value;
+            const regex = /^[A-Za-z][\w\.]*@gmail.com$/;
+            if(regex.test(email_address)){
+                document.getElementById('message').textContent="VALID";
+                document.getElementById('message').style.color="green";
+                document.getElementById('email').style.border="1px solid green";
+            }
+            else{
+                document.getElementById('message').textContent="INVALID";
+                document.getElementById('message').style.color="red";
+                document.getElementById('email').style.border="1px solid red";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex aadhar number validation</title>
+</head>
+<body>
+    <label for="aadhar">AADHAR Number</label>
+    <input type="text" name="aadhar" id="aadhar" placeholder="enter your AADHAR number">
+    <button onclick="validate_aadhar_number()">Validate</button>
+    <p id="message">The AADHAR number is validated!</p>
+
+    <script>
+        function validate_aadhar_number(){
+            const aadhar_number = document.getElementById('aadhar').value;
+            const regex = /^[2-9]\d{11}$/
+            if(regex.test(aadhar_number)){
+                document.getElementById('message').textContent="VALID";
+                document.getElementById('message').style.color="green";
+                document.getElementById('aadhar').style.border="1px solid green";
+            }
+            else{
+                document.getElementById('message').textContent="INVALID";
+                document.getElementById('message').style.color="red";
+                document.getElementById('aadhar').style.border="1px solid red";
+            }
+        }
+    </script>
+</body>
+</html>
